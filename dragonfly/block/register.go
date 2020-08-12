@@ -95,6 +95,7 @@ func init() {
 	world.RegisterBlock(Sand{}, Sand{Red: true})
 	world.RegisterBlock(Gravel{})
 	world.RegisterBlock(allConcretePowder()...)
+	world.RegisterBlock(allPrismarine()...)
 }
 
 func init() {
@@ -249,6 +250,10 @@ func init() {
 	world.RegisterItem("minecraft:sand", Sand{})
 	world.RegisterItem("minecraft:sand", Sand{Red: true})
 	world.RegisterItem("minecraft:gravel", Gravel{})
+
+	for _, p := range allPrismarine() {
+		world.RegisterItem("minecraft_prismarine", p.(world.Item))
+	}
 }
 
 func init() {

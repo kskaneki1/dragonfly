@@ -82,4 +82,5 @@ const (
 	hashStainedGlassPane
 	hashStainedGlass
 	hashWheat
+	hashPrismarine
 )
